@@ -6,6 +6,7 @@ type Option struct {
 	ApnsProduction  bool  `json:"apns_production"`
 	OverrideMsgId   int64 `json:"override_msg_id,omitempty"`
 	BigPushDuration int   `json:"big_push_duration,omitempty"`
+	//ThirdPartyChannel map[string]map[string]string `json:"third_party_channel"`
 }
 
 func (this *Option) SetSendno(no int) {
@@ -27,3 +28,7 @@ func (this *Option) SetApns(apns bool) {
 func (this *Option) SetBigPushDuration(bigPushDuration int) {
 	this.BigPushDuration = bigPushDuration
 }
+
+/*func (this *Option) SetThirdPartyChannel(thirdPartyChannel map[string]map[string]string) {
+	this.ThirdPartyChannel = thirdPartyChannel
+}*/
